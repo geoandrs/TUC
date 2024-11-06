@@ -1,0 +1,33 @@
+function [detected_input] = detect_4QAM(N, y)
+    
+    detected_input = zeros(N,1);
+        
+    X1 = 1+1i;
+    X2 = -1+1i;
+    X3 = -1-1i;
+    X4 = 1-1i;
+
+    for i = 1:N
+        sqrt(x2-x1)^2+(y2-y1)^2
+        dist1 = sqrt(real(y(i))-real(X1)^2+im(y(i))-real(X1)^2);
+        dist2 = abs(y(i)-X01);
+        dist3 = abs(y(i)-X11);
+        dist4 = abs(y(i)-X10);
+        
+        min_value = min([dist1 dist2 dist3 dist4]);
+        if(dist1 == min_value)
+            est_X(i) = X00;
+        elseif(dist2 == min_value)
+            est_X(i) = X01;
+        elseif(dist3 == min_value)
+            est_X(i) = X11;
+        elseif(dist4 == min_value)
+            est_X(i) = X10;
+        else
+            disp("Error");
+            return
+        end
+    end
+
+end
+
